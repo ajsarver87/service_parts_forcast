@@ -10,7 +10,7 @@ library(plyr)
 fitting.function <- function(x, h){
   temp.mod.arima <- auto.arima(x, seasonal = TRUE)
   temp.mod.ets <- ets(x)
-  if((temp.mod.arima$aic)-(temp.mod.ets$) > 0){
+  if((temp.mod.arima$aic)-(temp.mod.ets$aic) > 0){
     temp.mod <- temp.mod.ets
   }
   else{
